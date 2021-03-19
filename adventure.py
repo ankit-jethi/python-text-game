@@ -57,22 +57,28 @@ def ad_news():
     print("* Blaming a community.")
     print("* Changing a city name.")
     print("* Development of a religious building.")
+    global fake_news
+    fake_news = True
 
-    print("\n\tWhat do you want to do now?")
-    print("\t1. I am ready to vote.")
-    print("\t2. Read independent news media.")
-    print("\n\tEnter a number between 1-2.")
+    if real_news == True:
+        print("\nYou now realise the fake news reported on the advertiser-backed news media.")
+        print("\nLevel 2.")
+    else:
+        print("\n\tWhat do you want to do now?")
+        print("\t1. I am ready to vote.")
+        print("\t2. Read independent news media.")
+        print("\n\tEnter a number between 1-2.")
 
-    while True:
-        choice = input("\t> ")
+        while True:
+            choice = input("\t> ")
 
-        if choice == "1":
-            game_over()
-        elif choice == "2":
-            print("Indie news")
-            break
-        else:
-            print("\n\tPlease enter a valid number between 1-2.")
+            if choice == "1":
+                game_over()
+            elif choice == "2":
+                indie_news()
+                break
+            else:
+                print("\n\tPlease enter a valid number between 1-2.")
 
 def indie_news():
     print("\nRecent headlines:")
@@ -80,24 +86,30 @@ def indie_news():
     print("* Unemployment at an all time high.")
     print("* Judicial independence in danger.")
     print("* The country spent only 3% of its GDP on education in the past year.")
-    print("\nThe independent news media runs a column debunking fake news.")
+    print("\nThe independent news media also runs a column debunking fake news.")
+    global real_news
+    real_news = True
 
-    print("\n\tWhat do you want to do now?")
-    print("\t1. Read advertiser-backed news media.")
-    print("\t2. Go ahead to Level 2.")
-    print("\n\tEnter a number between 1-2.")
+    if fake_news == True:
+        print("\nYou now realise the fake news reported on the advertiser-backed news media.")
+        print("\nLevel 2.")
+    else:
+        print("\n\tWhat do you want to do now?")
+        print("\t1. Read advertiser-backed news media.")
+        print("\t2. Go ahead to Level 2.")
+        print("\n\tEnter a number between 1-2.")
 
-    while True:
-        choice = input("\t> ")
+        while True:
+            choice = input("\t> ")
 
-        if choice == "1":
-            print("Ad news")
-            break
-        elif choice == "2":
-            print("Level 2")
-            break
-        else:
-            print("\n\tPlease enter a valid number between 1-2.")
+            if choice == "1":
+                ad_news()
+                break
+            elif choice == "2":
+                print("\nLevel 2")
+                break
+            else:
+                print("\n\tPlease enter a valid number between 1-2.")
 
 def game_over():
     print("\nGame over.")
@@ -106,5 +118,8 @@ def game_over():
 print("Just because a country has problems, you don't elect the first dictator you see.")
 print("\nYou belong to a minority community in your country.")
 print("Elections are coming up. And you need to decide who are you going to vote for.")
+
+fake_news = False
+real_news = False
 
 level_1()
