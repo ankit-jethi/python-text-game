@@ -16,7 +16,7 @@ def level_1():
             ad_news()
             break
         elif choice == "3":
-            print("Indie news")
+            indie_news()
             break
         elif choice == "4":
             game_over()
@@ -70,6 +70,31 @@ def ad_news():
             game_over()
         elif choice == "2":
             print("Indie news")
+            break
+        else:
+            print("\n\tPlease enter a valid number between 1-2.")
+
+def indie_news():
+    print("\nRecent headlines:")
+    print("\n* Farmer's protests.")
+    print("* Unemployment at an all time high.")
+    print("* Judicial independence in danger.")
+    print("* The country spent only 3% of its GDP on education in the past year.")
+    print("\nThe independent news media runs a column debunking fake news.")
+
+    print("\n\tWhat do you want to do now?")
+    print("\t1. Read advertiser-backed news media.")
+    print("\t2. Go ahead to Level 2.")
+    print("\n\tEnter a number between 1-2.")
+
+    while True:
+        choice = input("\t> ")
+
+        if choice == "1":
+            print("Ad news")
+            break
+        elif choice == "2":
+            print("Level 2")
             break
         else:
             print("\n\tPlease enter a valid number between 1-2.")
