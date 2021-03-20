@@ -126,13 +126,38 @@ def level_2():
         choice = input("\t> ")
 
         if choice == "1":
-            print("\nPolitician's speech.")
+            politician()
             break
         elif choice == "2":
             game_over()
         else:
             print("\n\tPlease enter a valid number between 1-2.")
 
+def politician():
+    print("\nPolitician's speech:")
+    speech = "\n* The previous government didn't do shit.\n* We took revenge on our neighbouring country.\n* Some promises about development."
+    print(speech)
+
+    print("\n\tWhat do you want to do now?")
+    print("\t1. Get on a motorcycle and join the rally. Screw traffic.")
+    print("\t2. Ask the politician - What are the problems in this constituency and how are you going to solve them?")
+    print("\n\tEnter a number between 1-2.")
+
+    while True:
+        choice = input("\t> ")
+
+        if choice == "1":
+            print("\nLevel 3")
+            break
+        elif choice == "2":
+            print("\nPolitician's reply:")
+            print(speech)
+            print("\nRight.")
+            print("\nLevel 3")
+            break
+        else:
+            print("\n\tPlease enter a valid number between 1-2.")
+     
 def game_over():
     print("\nGame over.")
     exit(0)
