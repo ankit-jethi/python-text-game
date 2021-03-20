@@ -61,8 +61,9 @@ def ad_news():
     fake_news = True
 
     if real_news == True:
-        print("\nYou now realise the fake news reported on the advertiser-backed news media.")
-        print("\nLevel 2.")
+        print("\nReferring to the column from the independent news media, you realise that the advertiser-backed news media is spreading a bunch of fake news.")
+        print("Alright, enough with the news.")
+        level_2()
     else:
         print("\n\tWhat do you want to do now?")
         print("\t1. I am ready to vote.")
@@ -91,12 +92,13 @@ def indie_news():
     real_news = True
 
     if fake_news == True:
-        print("\nYou now realise the fake news reported on the advertiser-backed news media.")
-        print("\nLevel 2.")
+        print("\nReferring to this column, you realise that the advertiser-backed news media is spreading a bunch of fake news.")
+        print("Alright, enough with the news.")
+        level_2()
     else:
         print("\n\tWhat do you want to do now?")
         print("\t1. Read advertiser-backed news media.")
-        print("\t2. Go ahead to Level 2.")
+        print("\t2. I'm done reading the news.")
         print("\n\tEnter a number between 1-2.")
 
         while True:
@@ -106,10 +108,30 @@ def indie_news():
                 ad_news()
                 break
             elif choice == "2":
-                print("\nLevel 2")
+                level_2()
                 break
             else:
                 print("\n\tPlease enter a valid number between 1-2.")
+
+def level_2():
+    print("\nA few days go by.")
+    print("You are walking in the neighbourhood and you notice a politician campaigning in a nearby park.")
+
+    print("\n\tWhat do you want to do?")
+    print("\t1. Go and listen to the politician's speech.")
+    print("\t2. Just take the biryani and bottle of whiskey and say you're going to vote for them.")
+    print("\n\tEnter a number between 1-2.")
+
+    while True:
+        choice = input("\t> ")
+
+        if choice == "1":
+            print("\nPolitician's speech.")
+            break
+        elif choice == "2":
+            game_over()
+        else:
+            print("\n\tPlease enter a valid number between 1-2.")
 
 def game_over():
     print("\nGame over.")
