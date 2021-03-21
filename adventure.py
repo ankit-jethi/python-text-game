@@ -178,18 +178,46 @@ def level_3():
         choice = input("\t> ")
 
         if choice == "1" or choice == "2":
-            print("\nPolice")
+            police()
             break
         elif choice == "3" or choice == "4" or choice == "5" or choice == "6":
             game_over()
         else:
             print("\n\tPlease enter a valid number between 1-6.")
     
+def police():
+    print("""\nYou tell the police everything.
+        \rThe police says – why did you have to eat the holy animal? You called this upon yourself.
+        \rYou explain that you did not eat that animal. It's a misunderstanding. 
+        \rThe police doesn't believe you. 
+        \rYou are on your own.""")
+
+    print("""\n\tNow, what do you want to do?
+        1. Bribe the police to file a complaint.
+        2. Move to the courts.
+        3. Hire a bunch of goons to beat the guys who beat you up.
+        \n\tEnter a number between 1-3.""")
+
+    while True:
+        choice = input("\t> ")
+
+        if choice == "1" or choice == "3":
+            game_over()
+        elif choice == "2":
+            print("""\nThe court rules in your favour, saying you are allowed to eat what you want to eat.
+                \rAlso directs the police to arrest the people who beat you up.
+                \nThe elections are here. And finally you vote, as if your life depends on it. Because it does.
+                \rJust because a country has problems, you don't elect the first dictator you see.
+                \nYou completed the game. Well done.
+                """)
+            break
+        else:
+            print("\n\tPlease enter a valid number between 1-3.")       
+
 def game_over():
     print("\nGame over.")
     exit(0)
 
-print("Just because a country has problems, you don't elect the first dictator you see.")
 print("\nYou belong to a minority community in your country.")
 print("Elections are coming up. And you need to decide who are you going to vote for.")
 
