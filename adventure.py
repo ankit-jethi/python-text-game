@@ -4,7 +4,7 @@ def level_1():
         2. Read up on it from advertiser-backed news media.
         3. Read up on it from independent news media.
         4. Do not give a shit. It's not like voting makes a difference. Who cares who's in power, right?
-        \n\tEnter a number between 1-4.""")
+        \n\tPick an option from 1-4.""")
 
     while True:
         choice = input("\t> ")
@@ -19,7 +19,7 @@ def level_1():
         elif choice == "4":
             game_over("The party in power makes a law to take away the citizenship of your community.")
         else:
-            print("\n\tPlease enter a valid number between 1-4.")
+            print("\n\tPlease enter a valid number from 1-4.")
 
 def whatsapp():
     print("""\nHere are the last few messages from the group:
@@ -31,7 +31,7 @@ def whatsapp():
         1. Type awwwww.
         2. Post your own childhood pictures.
         3. Mute the group.
-        \n\tEnter a number between 1-3.""")
+        \n\tPick an option from 1-3.""")
 
     while True:
         choice = input("\t> ")
@@ -46,7 +46,7 @@ def whatsapp():
             print("\nYou mute the group, and then you close whatsapp.")
             break
         else:
-            print("\n\tPlease enter a valid number between 1-3.")
+            print("\n\tPlease enter a valid number from 1-3.")
 
 def ad_news():
     print("""\nRecent headlines:
@@ -67,7 +67,7 @@ def ad_news():
         print("""\n\tWhat do you want to do now?
             \r\t1. I am ready to vote.
             \r\t2. Read independent news media.
-            \n\tEnter a number between 1-2.""")
+            \n\tPick an option from 1-2.""")
 
         while True:
             choice = input("\t> ")
@@ -78,7 +78,7 @@ def ad_news():
             elif choice == "2":
                 indie_news()
             else:
-                print("\n\tPlease enter a valid number between 1-2.")
+                print("\n\tPlease enter a valid number from 1-2.")
 
 def indie_news():
     print("""\nRecent headlines:
@@ -99,7 +99,7 @@ def indie_news():
         print("""\n\tWhat do you want to do now?
             \r\t1. Read advertiser-backed news media.
             \r\t2. I'm done reading the news.
-            \n\tEnter a number between 1-2.""")
+            \n\tPick an option from 1-2.""")
 
         while True:
             choice = input("\t> ")
@@ -109,7 +109,7 @@ def indie_news():
             elif choice == "2":
                 level_2()
             else:
-                print("\n\tPlease enter a valid number between 1-2.")
+                print("\n\tPlease enter a valid number from 1-2.")
 
 def level_2():
     print("""\nA few days go by.
@@ -118,7 +118,7 @@ def level_2():
     print("""\n\tWhat do you want to do?
         1. Go and listen to the politician's speech.
         2. Just take the biryani and bottle of whiskey and say you're going to vote for them.
-        \n\tEnter a number between 1-2.""")
+        \n\tPick an option from 1-2.""")
 
     while True:
         choice = input("\t> ")
@@ -128,7 +128,7 @@ def level_2():
         elif choice == "2":
             game_over("The party you vote for comes in power and makes a law to take away the citizenship of your community.")
         else:
-            print("\n\tPlease enter a valid number between 1-2.")
+            print("\n\tPlease enter a valid number from 1-2.")
 
 def politician():
     speech = "\n\n* The previous government didn't do shit.\n* We took revenge on our neighbouring country.\n* Some promises about development."
@@ -137,7 +137,7 @@ def politician():
     print("""\n\tWhat do you want to do now?
         1. Get on a motorcycle and join the rally. Screw traffic.
         2. Ask the politician - What are the problems in this constituency and how are you going to solve them?
-        \n\tEnter a number between 1-2.""")
+        \n\tPick an option from 1-2.""")
 
     while True:
         choice = input("\t> ")
@@ -148,7 +148,7 @@ def politician():
             print(f"\nPolitician's reply:{speech}\n\nRight.")
             level_3()
         else:
-            print("\n\tPlease enter a valid number between 1-2.")
+            print("\n\tPlease enter a valid number from 1-2.")
      
 def level_3():
     print("""\nOnce the rally gets over, you leave.
@@ -164,7 +164,7 @@ def level_3():
         4. Change your religion.
         5. Move to a different country.
         6. Become a vegan.
-        \n\tEnter a number between 1-6.""")
+        \n\tPick an option from 1-6.""")
 
     while True:
         choice = input("\t> ")
@@ -174,7 +174,7 @@ def level_3():
         elif choice == "3" or choice == "4" or choice == "5" or choice == "6":
             game_over("Sad.")
         else:
-            print("\n\tPlease enter a valid number between 1-6.")
+            print("\n\tPlease enter a valid number from 1-6.")
     
 def police():
     print("""\nYou tell the police everything.
@@ -187,7 +187,7 @@ def police():
         1. Bribe the police to file a complaint.
         2. Move to the courts.
         3. Hire a bunch of goons to beat the guys who beat you up.
-        \n\tEnter a number between 1-3.""")
+        \n\tPick an option from 1-3.""")
 
     while True:
         choice = input("\t> ")
@@ -203,7 +203,7 @@ def police():
                 """)
             exit(0)
         else:
-            print("\n\tPlease enter a valid number between 1-3.")       
+            print("\n\tPlease enter a valid number from 1-3.")       
 
 def game_over(reason):
     print(f"\n{reason}\nGame over.\n")
